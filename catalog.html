@@ -10,7 +10,7 @@
   <header>
     <div>
       <a href="index.html">
-        <img src="https://via.placeholder.com/220x47" alt="Логотип интернет-магазина «Техномарт»">
+        <img src="https://via.placeholder.com/220x47" width="220" height="47" alt="Логотип интернет-магазина «Техномарт»">
       </a>
       <ul>
         <li><a href="#">Поиск</a></li>
@@ -30,7 +30,7 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#">Главная</a></li>
+        <li><a href="index.html">Главная</a></li>
         <li><a href="#">Компания</a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="#">Новости</a></li>
@@ -56,10 +56,12 @@
       <form action="https://echo.htmlacademy.ru" method="get">
         <fieldset>
           <legend>Цена:</legend>
-          <ul>
-            <li>0</li>
-            <li>30000</li>
-          </ul>
+          <input type="range" min="0" max="100" step="1" value="80" id="filter-price">
+          <label for="filter-price">Диапазон цены</label>
+          <div>
+            <input type="number" name="price-min" value="0">
+            <input type="number" name="price-max" value="30000">
+          </div>
         </fieldset>
         <fieldset>
           <legend>Производители:</legend>
@@ -104,26 +106,26 @@
           <legend>Сортировка:</legend>
           <ul>
             <li>
-              <input type="radio" name="sort-group" value="price" id="filter-price" checked>
-              <label for="filter-price">По цене</label>
+              <input type="radio" name="sort-group" value="price" id="sort-price" checked>
+              <label for="sort-price">По цене</label>
             </li>
             <li>
-              <input type="radio" name="sort-group" value="type" id="filter-type">
-              <label for="filter-type">По типу</label>
+              <input type="radio" name="sort-group" value="type" id="sort-type">
+              <label for="sort-type">По типу</label>
             </li>
             <li>
-              <input type="radio" name="sort-group" value="functional" id="filter-functional">
-              <label for="filter-functional">По функционалу</label>
+              <input type="radio" name="sort-group" value="functional" id="sort-functional">
+              <label for="sort-functional">По функционалу</label>
             </li>
           </ul>
           <ul>
             <li>
-              <input type="radio" name="sort-order" value="asc" id="filter-asc" checked>
-              <label for="filter-asc">По возрастанию</label>
+              <input type="radio" name="sort-order" value="asc" id="sort-asc" checked>
+              <label for="sort-asc">По возрастанию</label>
             </li>
             <li>
-              <input type="radio" name="sort-order" value="desc" id="filter-desc">
-              <label for="filter-desc">По убыванию</label>
+              <input type="radio" name="sort-order" value="desc" id="sort-desc">
+              <label for="sort-desc">По убыванию</label>
             </li>
           </ul>
         </fieldset>
@@ -133,114 +135,117 @@
 
     <section>
       <h2>Список товаров</h2>
-      <li>
-        <figure>
-          <img src="https://via.placeholder.com/144x128" alt="Фото перфоратора BOSCH BFG 6000">
-          <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
-        </figure>
-        <div>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
-        </div>
-        <p>30500 Р.</p>
-        <p>25500 Р.</p>
-      </li>
-      <li>
-        <figure>
-          <img src="https://via.placeholder.com/144x128" alt="Фото перфоратора BOSCH BFG 6000">
-          <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
-        </figure>
-        <div>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
-        </div>
-        <p>30500 Р.</p>
-        <p>25500 Р.</p>
-      </li>
-      <li>
-        <figure>
-          <img src="https://via.placeholder.com/144x128" alt="Фото перфоратора BOSCH BFG 6000">
-          <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
-        </figure>
-        <div>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
-        </div>
-        <p>30500 Р.</p>
-        <p>25500 Р.</p>
-      </li>
-      <li>
-        <figure>
-          <img src="https://via.placeholder.com/144x128" alt="Фото перфоратора BOSCH BFG 6000">
-          <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
-        </figure>
-        <div>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
-        </div>
-        <p>30500 Р.</p>
-        <p>25500 Р.</p>
-      </li>
-      <li>
-        <figure>
-          <img src="https://via.placeholder.com/144x128" alt="Фото перфоратора BOSCH BFG 6000">
-          <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
-        </figure>
-        <div>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
-        </div>
-        <p>30500 Р.</p>
-        <p>25500 Р.</p>
-      </li>
-      <li>
-        <figure>
-          <img src="https://via.placeholder.com/144x128" alt="Фото перфоратора BOSCH BFG 6000">
-          <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
-        </figure>
-        <div>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
-        </div>
-        <p>30500 Р.</p>
-        <p>25500 Р.</p>
-      </li>
-      <li>
-        <figure>
-          <img src="https://via.placeholder.com/144x128" alt="Фото перфоратора BOSCH BFG 6000">
-          <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
-        </figure>
-        <div>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
-        </div>
-        <p>30500 Р.</p>
-        <p>25500 Р.</p>
-      </li>
-      <li>
-        <figure>
-          <img src="https://via.placeholder.com/144x128" alt="Фото перфоратора BOSCH BFG 6000">
-          <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
-        </figure>
-        <div>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
-        </div>
-        <p>30500 Р.</p>
-        <p>25500 Р.</p>
-      </li>
-      <li>
-        <figure>
-          <img src="https://via.placeholder.com/144x128" alt="Фото перфоратора BOSCH BFG 6000">
-          <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
-        </figure>
-        <div>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
-        </div>
-        <p>30500 Р.</p>
-        <p>25500 Р.</p>
-      </li>
+      <ul>
+        <li>
+          <figure>
+            <img src="https://via.placeholder.com/144x128" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
+            <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
+          </figure>
+          <div>
+            <button type="button">Купить</button>
+            <button type="button">В закладки</button>
+          </div>
+          <p>30500 Р.</p>
+          <p>25500 Р.</p>
+        </li>
+        <li>
+          <figure>
+            <img src="https://via.placeholder.com/144x128" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
+            <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
+          </figure>
+          <div>
+            <button type="button">Купить</button>
+            <button type="button">В закладки</button>
+          </div>
+          <p>30500 Р.</p>
+          <p>25500 Р.</p>
+        </li>
+        <li>
+          <figure>
+            <img src="https://via.placeholder.com/144x128" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
+            <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
+          </figure>
+          <div>
+            <button type="button">Купить</button>
+            <button type="button">В закладки</button>
+          </div>
+          <p>30500 Р.</p>
+          <p>25500 Р.</p>
+        </li>
+        <li>
+          <figure>
+            <img src="https://via.placeholder.com/144x128" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
+            <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
+          </figure>
+          <div>
+            <button type="button">Купить</button>
+            <button type="button">В закладки</button>
+          </div>
+          <p>30500 Р.</p>
+          <p>25500 Р.</p>
+        </li>
+        <li>
+          <figure>
+            <img src="https://via.placeholder.com/144x128" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
+            <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
+          </figure>
+          <div>
+            <button type="button">Купить</button>
+            <button type="button">В закладки</button>
+          </div>
+          <p>30500 Р.</p>
+          <p>25500 Р.</p>
+        </li>
+        <li>
+          <figure>
+            <img src="https://via.placeholder.com/144x128" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
+            <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
+          </figure>
+          <div>
+            <button type="button">Купить</button>
+            <button type="button">В закладки</button>
+          </div>
+          <p>30500 Р.</p>
+          <p>25500 Р.</p>
+        </li>
+        <li>
+          <figure>
+            <img src="https://via.placeholder.com/144x128" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
+            <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
+          </figure>
+          <div>
+            <button type="button">Купить</button>
+            <button type="button">В закладки</button>
+          </div>
+          <p>30500 Р.</p>
+          <p>25500 Р.</p>
+        </li>
+        <li>
+          <figure>
+            <img src="https://via.placeholder.com/144x128" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
+            <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
+          </figure>
+          <div>
+            <button type="button">Купить</button>
+            <button type="button">В закладки</button>
+          </div>
+          <p>30500 Р.</p>
+          <p>25500 Р.</p>
+        </li>
+        <li>
+          <figure>
+            <img src="https://via.placeholder.com/144x128" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
+            <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
+          </figure>
+          <div>
+            <button type="button">Купить</button>
+            <button type="button">В закладки</button>
+          </div>
+          <p>30500 Р.</p>
+          <p>25500 Р.</p>
+        </li>
+      </ul>
+
       <ul>
         <li><a>1</a></li>
         <li><a href="#">2</a></li>
@@ -254,7 +259,7 @@
   <footer>
     <div>
       <a href="index.html">
-        <img src="https://via.placeholder.com/220x68" alt="Логотип интернет-магазина «Техномарт»">
+        <img src="https://via.placeholder.com/220x68" width="220" height="86" alt="Логотип интернет-магазина «Техномарт»">
       </a>
       <ul>
         <li><a href="#">Компания</a></li>
