@@ -1,0 +1,433 @@
+/* fonts */
+
+@font-face {
+  font-family: "Cuprum";
+	font-weight: 400;
+  font-style: normal;
+	src: url("../fonts/cuprum.woff2") format("woff2"), url("../fonts/cuprum.woff") format("woff");
+}
+@font-face {
+  font-family: "Cuprum";
+	font-weight: 700;
+  font-style: normal;
+	src: url("../fonts/cuprumbold.woff2") format("woff2"), url("../fonts/cuprumbold.woff") format("woff");
+}
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../fonts/cuprumitalic.woff2") format("woff2"), url("../fonts/cuprumitalic.woff") format("woff");
+}
+@font-face {
+	font-family: "Cuprum";
+	font-weight: 700;
+  font-style: italic;
+	src: url("../fonts/cuprumbolditalic.woff2") format("woff2"), url("../fonts/cuprumbolditalic.woff") format("woff");
+}
+@font-face {
+  font-family: "PT Sans";
+	font-weight: 400;
+  font-style: normal;
+	src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+}
+@font-face {
+  font-family: "PT Sans";
+	font-weight: 700;
+  font-style: normal;
+	src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+}
+
+/* variables */
+
+:root {
+  --white: #ffffff;
+  --white-alpha-030: rgba(255, 255, 255, 0.3);
+  
+  --black: #000000;
+  --black-alpha-024: rgba(0, 0, 0, 0.24);
+  --black-alpha-025: rgba(0, 0, 0, 0.25);
+
+  --blue-solitude: #f1f5f7;
+  --blue-solitude-light: #f3f7f9;
+    
+  --blue-summer-sky: #3bbce3;
+  --blue-astronaut: #3d546f;
+  --blue-gulf-blue: #32425c;
+  --blue-bunting: #293449;
+  
+  --grey-romance: #f9f5f0;
+  --grey-silver: #c5c5c5;
+  --grey-dark-gray: #a9a9a9;
+  --grey-mortar: #585656;
+
+  --red-amaranth: #ee3643;
+  
+  --green-gossip: #8ed78f;
+  --green-apple: #63a63e;
+
+  --yellow-salomie: #ffd180;
+  --yellow-golden-tainoi: #ffbf47;
+
+  --violet-plum: #dc91d8;
+}
+
+/* global */
+
+.page {
+  min-height: 960px;
+  margin: 0;
+  padding: 20px; /*! Временно */
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list {
+  list-style: none;
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo {
+  background-color: var(--red-amaranth);
+  box-shadow: inset 0px -5px 0px var(--black-alpha-024);
+}
+
+.btn {
+  border: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* header */
+
+.header-top {
+  background-color: var(--blue-bunting);
+}
+
+.header-top a {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.checkout {
+  background-color: var(--green-apple);
+}
+
+.header-middle {
+  background-color: var(--blue-solitude);
+}
+
+.header-middle__description {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--red-amaranth);
+}
+
+.header-middle__phone {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--red-amaranth);
+  background: var(--blue-solitude-light);
+  border: 3px solid var(--white);
+}
+
+.header-middle__address {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--blue-gulf-blue);
+}
+
+.user-account .btn {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.user-account .btn:hover {
+  color: var(--red-amaranth);
+}
+
+.header-bottom {
+  background: var(--blue-gulf-blue);
+  box-shadow: inset 0px -5px 0px var(--blue-bunting);
+}
+
+.header-bottom a {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.header-bottom__item:hover {
+  background-color: var(--blue-bunting);
+}
+
+/* pre-catalog */
+
+.pre-catalog__list {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.pre-catalog__item h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.pre-catalog__item .link {
+  font-size: 14px;
+  line-height: 18px;
+  background-color: var(--white-alpha-030);
+}
+
+.pre-catalog-slider__description {
+  background-color: var(--black-alpha-025);
+}
+
+.pre-catalog__item .pre-catalog-slider__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.pre-catalog-slider__text {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.pre-catalog__item .pre-catalog-slider__link {
+  background-color: var(--red-amaranth);
+}
+
+.materials {
+  background-color: var(--yellow-golden-tainoi);
+}
+
+.tool {
+  background-color: var(--blue-summer-sky);
+}
+
+.technique {
+  background-color: var(--violet-plum);
+}
+
+.discount {
+  background-color: var(--green-gossip);
+}
+
+.delivery {
+  background-color: var(--yellow-golden-tainoi);
+}
+
+/* popular-products & popular-manufacturers */
+
+.popular-products__title-wrap,
+.popular-manufacturers__title-wrap {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
+  background-color: var(--grey-romance);
+}
+
+.popular-products__title,
+.popular-manufacturers__title {
+  font-size: 30px;
+  line-height: 30px;  
+  color: var(--blue-gulf-blue);
+}
+
+.popular-products__link,
+.popular-manufacturers__link {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--white);
+  background-color: var(--red-amaranth);
+}
+
+.product-item {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700; 
+}
+
+.product-item__title {
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--black);
+}
+
+.product-item__price-old {  
+  font-size: 17px;
+  line-height: 18px;
+  text-decoration-line: line-through;
+  color: var(--grey-dark-gray);
+}
+
+.product-item__price {
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--white);
+  background-color: var(--red-amaranth);
+}
+
+/* service */
+
+.service__title,
+.service-slider__description-title {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.service__description,
+.service-slider__description-text {
+  font-family: "PT Sans", "Arial", sans-serif;  
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.service-slider__item {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--blue-gulf-blue);
+}
+
+.service-slider__item:hover {
+  background-color: var(--blue-bunting);
+}
+
+.service-slider__item--active {
+  color: var(--blue-gulf-blue);
+  background-color: var(--white);
+}
+
+.service-slider__description-title {
+  color: var(--blue-gulf-blue);
+}
+
+/* company & contacts */
+
+.company__title
+.contacts__title {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.company__text,
+.contacts__tex {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.company__item {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.company__link,
+.contacts__btn {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--white);
+  background-color: var(--red-amaranth);
+}
+
+/* footer */
+
+.footer-top,
+.footer-middle {
+  background-color: var(--blue-gulf-blue);
+}
+
+.footer-top__item {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--blue-solitude);
+}
+
+.footer-top__item:hover {
+  text-decoration-line: underline;
+}
+
+.footer-middle__info-wrap,
+.footer-middle__item {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.footer-middle__info-wrap {
+  color: var(--blue-solitude-light);
+}
+
+.footer-middle__item {
+  color: var(--yellow-salomie);
+}
+
+.footer-middle__item:hover {
+  text-decoration-line: underline;
+}
+
+.footer-bottom {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--white);
+  background-color: var(--blue-bunting);
+}
+
+.footer-bottom__feedback-link,
+.footer-bottom__developer-link {
+  color: var(--yellow-salomie);
+}
+
+.footer-bottom__feedback-link:hover,
+.footer-bottom__developer-link:hover {
+  text-decoration-line: underline;
+}
