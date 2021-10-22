@@ -41,6 +41,7 @@
 
 :root {
   --white: #ffffff;
+  --white-smoke: #eaeaea;
   --white-alpha-030: rgba(255, 255, 255, 0.3);
   
   --black: #000000;
@@ -74,16 +75,25 @@
 
 /* global */
 
+.html  {
+  height: 100%;
+}
+
 .page {
-  min-height: 960px;
+  min-width: 940px;
   margin: 0;
-  padding: 20px; /*! Временно */
+  padding: 0;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
   font-weight: 700;
   color: var(--black);
   background-color: var(--white);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 input, textarea, select, button {
@@ -97,6 +107,7 @@ input, textarea, select, button {
 
 .list {
   list-style: none;
+  padding: 0;
 }
 
 .img {
@@ -105,6 +116,7 @@ input, textarea, select, button {
 }
 
 .logo {
+  width: 220px;
   background-color: var(--red-amaranth);
   box-shadow: inset 0px -5px 0px var(--black-alpha-024);
 }
@@ -117,10 +129,54 @@ input, textarea, select, button {
   text-transform: uppercase;
 }
 
+.wrap {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*! Временно */
+
+/* body > * {
+  outline: 2px solid deeppink;
+}
+
+body > * > * {
+  outline: 2px dashed lime;
+  outline-offset: -2px;
+}
+
+body > * > * > * {
+  outline: 2px dotted dodgerblue;
+  outline-offset: -4px;
+} */
+
 /* header */
 
 .header-top {
   background-color: var(--blue-bunting);
+  height: 42px;
+}
+
+.header-top__wrap {
+  display: grid;
+  grid-template-columns: max-content 1fr;
 }
 
 .header-top a {
@@ -128,6 +184,31 @@ input, textarea, select, button {
   line-height: 24px;
   font-weight: 400;
   color: var(--white);
+}
+
+.header-top__list {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 150px);
+  margin: 0;
+  height: 42px;
+}
+
+.header-top__item {
+  text-align: center;
+  padding-top: 9px;
+}
+
+.header-top__logo {
+  height: 47px;
+}
+
+.header-top__logo .img {
+  padding-top: 12px;
+  padding-left: 56px;
+}
+
+.search {
+  text-align: left;
 }
 
 .checkout {
@@ -138,12 +219,19 @@ input, textarea, select, button {
   background-color: var(--blue-solitude);
 }
 
+.header-middle__wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .header-middle__description {
+  width: 197px;
   font-size: 16px;
   line-height: 23px;
   font-weight: 400;
   font-style: italic;
   color: var(--red-amaranth);
+  padding-left: 30px;
 }
 
 .header-middle__phone {
@@ -175,6 +263,12 @@ input, textarea, select, button {
 }
 
 .header-bottom {
+  background-color: var(--blue-solitude);
+  padding-bottom: 60px;
+}
+
+.header-bottom__wrap {
+  height: 60px;
   background: var(--blue-gulf-blue);
   box-shadow: inset 0px -5px 0px var(--blue-bunting);
 }
@@ -186,6 +280,14 @@ input, textarea, select, button {
   color: var(--white);
 }
 
+.header-bottom__list {
+  display: grid;
+  grid-template-columns: repeat(7, max-content);
+  column-gap: 56px;
+  padding: 16px 53px 20px;
+  margin: 0;
+}
+
 .header-bottom__item:hover {
   background-color: var(--blue-bunting);
 }
@@ -193,8 +295,16 @@ input, textarea, select, button {
 /* pre-catalog */
 
 .pre-catalog__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
   font-weight: 400;
   color: var(--white);
+}
+
+.pre-catalog__item:not(.pre-catalog-slider) {
+  height: 123px;
 }
 
 .pre-catalog__item h3 {
@@ -207,6 +317,13 @@ input, textarea, select, button {
   font-size: 14px;
   line-height: 18px;
   background-color: var(--white-alpha-030);
+}
+
+.pre-catalog-slider {
+  grid-column: 1 / 3;
+  grid-row: 2 / -1;
+  background-color: var(--grey-dark-gray);
+  background-image: url(../img/slider/catalog-perforators.jpg);
 }
 
 .pre-catalog-slider__description {
@@ -250,6 +367,13 @@ input, textarea, select, button {
 
 /* popular-products & popular-manufacturers */
 
+.popular-products__list,
+.popular-manufacturers__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
 .popular-products__title-wrap,
 .popular-manufacturers__title-wrap {
   font-weight: 400;
@@ -273,7 +397,8 @@ input, textarea, select, button {
 
 .product-item {
   font-family: "PT Sans", "Arial", sans-serif;
-  font-weight: 700; 
+  font-weight: 700;
+  border: 1px solid var(--white-smoke);
 }
 
 .product-item__title {
@@ -296,7 +421,21 @@ input, textarea, select, button {
   background-color: var(--red-amaranth);
 }
 
+.popular-manufacturers__item {
+  border: 1px solid var(--white-smoke);
+}
+
 /* service */
+
+.service {
+  background-color: var(--blue-solitude);
+}
+
+.service__slider {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  column-gap: 80px;
+}
 
 .service__title,
 .service-slider__description-title {
@@ -314,6 +453,7 @@ input, textarea, select, button {
 }
 
 .service-slider__item {
+  height: 61px;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
@@ -336,6 +476,13 @@ input, textarea, select, button {
 
 /* company & contacts */
 
+.info {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 20px;
+  padding-bottom: 70px;
+}
+
 .company__title,
 .contacts__title {
   font-size: 30px;
@@ -349,6 +496,10 @@ input, textarea, select, button {
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
+}
+
+.company__description {
+  width: 460px;
 }
 
 .company__item {
@@ -373,6 +524,27 @@ input, textarea, select, button {
   background-color: var(--blue-gulf-blue);
 }
 
+.footer-top__wrap {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.footer-top__logo {
+  height: 68px;
+}
+
+.footer-top__logo .img {
+  padding-top: 20px;
+  padding-left: 41px;
+}
+
+.footer-top__list {
+  justify-self: end;
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  column-gap: 58px;
+}
+
 .footer-top__item {
   font-size: 18px;
   line-height: 24px;
@@ -382,6 +554,18 @@ input, textarea, select, button {
 
 .footer-top__item:hover {
   text-decoration-line: underline;
+}
+
+.footer-middle__wrap {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.footer-middle__list {
+  justify-self: end;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  column-gap: 58px;
 }
 
 .footer-middle__info-wrap,
@@ -403,12 +587,21 @@ input, textarea, select, button {
   text-decoration-line: underline;
 }
 
+.footer-bottom__wrap {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+}
+
 .footer-bottom {
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
   color: var(--white);
   background-color: var(--blue-bunting);
+}
+
+.footer-bottom__social {
+  justify-self: center;
 }
 
 .footer-bottom__feedback-link,
