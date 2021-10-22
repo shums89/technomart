@@ -124,7 +124,6 @@ input, textarea, select, button {
 }
 
 .header-top a {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -140,7 +139,6 @@ input, textarea, select, button {
 }
 
 .header-middle__description {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 16px;
   line-height: 23px;
   font-weight: 400;
@@ -149,7 +147,6 @@ input, textarea, select, button {
 }
 
 .header-middle__phone {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
@@ -159,7 +156,6 @@ input, textarea, select, button {
 }
 
 .header-middle__address {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
@@ -167,7 +163,6 @@ input, textarea, select, button {
 }
 
 .user-account .btn {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
   line-height: 21px;
   font-weight: 400;
@@ -185,7 +180,6 @@ input, textarea, select, button {
 }
 
 .header-bottom a {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -199,7 +193,6 @@ input, textarea, select, button {
 /* pre-catalog */
 
 .pre-catalog__list {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: 400;
   color: var(--white);
 }
@@ -259,7 +252,6 @@ input, textarea, select, button {
 
 .popular-products__title-wrap,
 .popular-manufacturers__title-wrap {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: 400;
   background-color: var(--grey-romance-lihgt);
 }
@@ -308,7 +300,6 @@ input, textarea, select, button {
 
 .service__title,
 .service-slider__description-title {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -323,7 +314,6 @@ input, textarea, select, button {
 }
 
 .service-slider__item {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
@@ -346,9 +336,8 @@ input, textarea, select, button {
 
 /* company & contacts */
 
-.company__title
+.company__title,
 .contacts__title {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -363,7 +352,6 @@ input, textarea, select, button {
 }
 
 .company__item {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -371,7 +359,6 @@ input, textarea, select, button {
 
 .company__link,
 .contacts__btn {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -387,7 +374,6 @@ input, textarea, select, button {
 }
 
 .footer-top__item {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -400,7 +386,6 @@ input, textarea, select, button {
 
 .footer-middle__info-wrap,
 .footer-middle__item {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -419,7 +404,6 @@ input, textarea, select, button {
 }
 
 .footer-bottom {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -440,7 +424,6 @@ input, textarea, select, button {
 /* catalog.html */
 
 .main-title {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
