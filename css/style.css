@@ -55,7 +55,8 @@
   --blue-gulf-blue: #32425c;
   --blue-bunting: #293449;
   
-  --grey-romance: #f9f5f0;
+  --grey-romance: #f7f3ec;
+  --grey-romance-lihgt: #f9f5f0;
   --grey-silver: #c5c5c5;
   --grey-dark-gray: #a9a9a9;
   --grey-mortar: #585656;
@@ -83,6 +84,10 @@
   font-weight: 700;
   color: var(--black);
   background-color: var(--white);
+}
+
+input, textarea, select, button {
+  font: inherit;
 }
 
 .link {
@@ -256,7 +261,7 @@
 .popular-manufacturers__title-wrap {
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: 400;
-  background-color: var(--grey-romance);
+  background-color: var(--grey-romance-lihgt);
 }
 
 .popular-products__title,
@@ -431,3 +436,33 @@
 .footer-bottom__developer-link:hover {
   text-decoration-line: underline;
 }
+
+/* catalog.html */
+
+.main-title {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  color: var(--blue-gulf-blue);
+  background-color: var(--blue-solitude);
+}
+
+.breadcrumbs-list {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.filter {
+  font-family: "PT Sans", "Arial", sans-serif; 
+  font-weight: 400; 
+}
+
+.filter__title {
+  font-size: 13px;
+  line-height: 18px;
+  background-color: var(--grey-romance);
+}
+
