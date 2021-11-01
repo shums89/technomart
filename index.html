@@ -17,15 +17,16 @@
         <a class="header-top__logo logo link" href="index.html">
           <img class="logo__img img" src="img/logo.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»">
         </a>
+        <form class="header-top__form search-form" action="https://echo.htmlacademy.ru" method="post">
+          <input class="search-form__input" type="search" name="search" id="search-field" placeholder="Поиск:">
+          <label class="search-form__label visually-hidden" for="search">Поиск</label>
+        </form>
         <ul class="header-top__list list">
-          <li class="header-top__item search">
-            <a class="header-top__link link" href="#">Поиск</a>
-          </li>
           <li class="header-top__item bookmarks">
-            <a class="header-top__link link" href="#">Закладки</a>
+            <a class="header-top__link bookmarks-link link" href="#">Закладки: 0</a>
           </li>
           <li class="header-top__item basket">
-            <a class="header-top__link link" href="#">Корзина</a>
+            <a class="header-top__link basket-link link" href="#">Корзина: 0</a>
           </li>
           <li class="header-top__item checkout">
             <a class="header-top__link link" href="#">Оформить заказ</a>
@@ -62,7 +63,7 @@
             <a class="header-bottom__link link" href="#">Новости</a>
           </li>
           <li class="header-bottom__item">
-            <a class="header-bottom__link link" href="#">Спецпердложения</a>
+            <a class="header-bottom__link link" href="#">Спецпредложения</a>
           </li>
           <li class="header-bottom__item">
             <a class="header-bottom__link link" href="#">Доставка</a>
@@ -91,31 +92,41 @@
           </div>
         </li>
         <li class="pre-catalog__item materials new">
-          <h3 class="pre-catalog__item-title">Материлы</h3>
-          <a class="pre-catalog__item-link link uppercase" href="#">На любой вкус</a>
+          <h3 class="pre-catalog__item-title">Материалы</h3>
+          <div class="pre-catalog__item-link-wrap">
+            <a class="pre-catalog__item-link link uppercase" href="#">На любой вкус</a>
+          </div>
         </li>
         <li class="pre-catalog__item tool">
           <h3 class="pre-catalog__item-title">Инструмент</h3>
-          <a class="pre-catalog__item-link link uppercase" href="#">На все случаи</a>
+          <div class="pre-catalog__item-link-wrap">
+            <a class="pre-catalog__item-link link uppercase" href="#">На все случаи</a>
+          </div>
         </li>
         <li class="pre-catalog__item technique">
           <h3 class="pre-catalog__item-title">Техника</h3>
-          <a class="pre-catalog__item-link link uppercase" href="#">Для стройки</a>
+          <div class="pre-catalog__item-link-wrap">
+            <a class="pre-catalog__item-link link uppercase" href="#">Для стройки</a>
+          </div>
         </li>
         <li class="pre-catalog__item discount">
           <h3 class="pre-catalog__item-title">Скидка 50%</h3>
-          <a class="pre-catalog__item-link link uppercase" href="#">На 350 товаров</a>
+          <div class="pre-catalog__item-link-wrap">
+            <a class="pre-catalog__item-link link uppercase" href="#">На 350 товаров</a>
+          </div>
         </li>
         <li class="pre-catalog__item delivery">
           <h3 class="pre-catalog__item-title">Доставка</h3>
-          <a class="pre-catalog__item-link link uppercase" href="#">Бесплатно</a>
+          <div class="pre-catalog__item-link-wrap">
+            <a class="pre-catalog__item-link link uppercase" href="#">Бесплатно</a>
+          </div>
         </li>
       </ul>
     </section>
 
     <section class="popular-products wrap">
       <div class="popular-products__title-wrap">
-        <h2 class="popular-products__title uppercase">Популярные товары</h2>
+        <h2 class="popular-products__title uppercase">Популярные товары:</h2>
         <a class="popular-products__link link uppercase" href="#">Все популярные товары</a>
       </div>
       <ul class="popular-products__list list">
@@ -124,10 +135,6 @@
             <img class="product-item__img img" src="img/products/bosch-bfg-9000.jpg" width="184" height="164" alt="Фото перфоратора BOSCH BFG 9000">
             <figcaption class="product-item__title">Перфоратор BOSCH BFG 9000</figcaption>
           </figure>
-          <div class="product-item__actions-wrap">
-            <button class="product-item__action action-btn-buy btn uppercase" type="button">Купить</button>
-            <button class="product-item__action action-btn-bookmark btn uppercase" type="button">В закладки</button>
-          </div>
           <p class="product-item__price-old uppercase">32500 Р.</p>
           <p class="product-item__price uppercase">25500 Р.</p>
         </li>
@@ -136,10 +143,6 @@
             <img class="product-item__img img" src="img/products/bosch-bfg-3000.jpg" width="127" height="112" alt="Фото перфоратора BOSCH BFG 3000">
             <figcaption class="product-item__title">Перфоратор BOSCH BFG 3000</figcaption>
           </figure>
-          <div class="product-item__actions-wrap">
-            <button class="product-item__action action-btn-buy btn uppercase" type="button">Купить</button>
-            <button class="product-item__action action-btn-bookmark btn uppercase" type="button">В закладки</button>
-          </div>
           <p class="product-item__price-old uppercase">22500 Р.</p>
           <p class="product-item__price uppercase">15500 Р.</p>
         </li>
@@ -148,10 +151,6 @@
             <img class="product-item__img img" src="img/products/bosch-bfg-6000.jpg" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
             <figcaption class="product-item__title">Перфоратор BOSCH BFG 6000</figcaption>
           </figure>
-          <div class="product-item__actions-wrap">
-            <button class="product-item__action action-btn-buy btn uppercase" type="button">Купить</button>
-            <button class="product-item__action action-btn-bookmark btn uppercase" type="button">В закладки</button>
-          </div>
           <p class="product-item__price-old uppercase">30500 Р.</p>
           <p class="product-item__price uppercase">25500 Р.</p>
         </li>
@@ -160,10 +159,6 @@
             <img class="product-item__img img" src="img/products/bosch-bfg-2000.jpg" width="127" height="112" alt="Фото перфоратора BOSCH BFG 2000">
             <figcaption class="product-item__title">Перфоратор BOSCH BFG 2000</figcaption>
           </figure>
-          <div class="product-item__actions-wrap">
-            <button class="product-item__action action-btn-buy btn uppercase" type="button">Купить</button>
-            <button class="product-item__action action-btn-bookmark btn uppercase" type="button">В закладки</button>
-          </div>
           <p class="product-item__price-old uppercase">22500 Р.</p>
           <p class="product-item__price uppercase">12500 Р.</p>
         </li>
@@ -172,7 +167,7 @@
 
     <section class="popular-manufacturers wrap">
       <div class="popular-manufacturers__title-wrap">
-        <h2 class="popular-manufacturers__title uppercase">Популярные производители</h2>
+        <h2 class="popular-manufacturers__title uppercase">Популярные производители:</h2>
         <a class="popular-manufacturers__link link uppercase" href="#">Все производители</a>
       </div>
       <ul class="popular-manufacturers__list list">
@@ -228,9 +223,15 @@
         <div class="service__slider service-slider">
           <h3 class="visually-hidden">Слайдер Сервисы</h3>
           <ul class="service-slider__list list">
-            <li class="service-slider__item service-slider__item--active">Доставка</li>
-            <li class="service-slider__item">Гарантия</li>
-            <li class="service-slider__item">Кредит</li>
+            <li class="service-slider__item service-slider__item--active">
+              <a class="service-slider__link link" href="#">Доставка</a>
+            </li>
+            <li class="service-slider__item">
+              <a class="service-slider__link link" href="#">Гарантия</a>
+            </li>
+            <li class="service-slider__item">
+              <a class="service-slider__link link" href="#">Кредит</a>
+            </li>
           </ul>
           <div class="service-slider__description-wrap">
             <p class="service-slider__description-title uppercase">Доставка</p>
@@ -262,11 +263,9 @@
       <section class="contacts">
         <h2 class="contacts__title uppercase">Контакты</h2>
         <p class="contacts__text">Вы можете забрать товар сами,<br>заехав в наш офис:</p>
-        <figure>
-          <a class="contacts__link link" href="#">
-            <img class="contacts__img img" src="img/map.png" width="300" height="158" alt="Карта">
-          </a>
-        </figure>
+        <a class="contacts__link link" href="#">
+          <img class="contacts__img img" src="img/map.png" width="300" height="158" alt="Карта">
+        </a>
         <button class="contacts__btn btn uppercase" type="button">Заблудились? Напишите нам!</button>
       </section>
     </div>
@@ -314,7 +313,7 @@
             <a class="footer-middle__link link" href="#">Инструмент</a>
           </li>
           <li class="footer-middle__item">
-            <a class="footer-middle__link link" href="#">Спецпердложения</a>
+            <a class="footer-middle__link link" href="#">Спецпредложения</a>
           </li>
         </ul>
       </div>
@@ -329,13 +328,19 @@
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="footer-bottom__social-list list">
             <li class="footer-bottom__social-item">
-              <a class="footer-bottom__social-link link" href="#">Вконтакте</a>
+              <a class="footer-bottom__social-link link" href="#">
+                <img src="img/icons/vk.svg" alt="Логотип Вконтакте" width="25" height="14">
+              </a>
             </li>
             <li class="footer-bottom__social-item">
-              <a class="footer-bottom__social-link link" href="#">Фейсбук</a>
+              <a class="footer-bottom__social-link link" href="#">
+                <img src="img/icons/facebook.svg" alt="Логотип Фейсбук" width="12" height="22">
+              </a>
             </li>
             <li class="footer-bottom__social-item">
-              <a class="footer-bottom__social-link link" href="#">Инстаграм</a>
+              <a class="footer-bottom__social-link link" href="#">
+                <img src="img/icons/instagram.svg" alt="Логотип Инстаграм" width="21" height="21">
+              </a>
             </li>
           </ul>
         </div>
