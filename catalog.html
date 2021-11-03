@@ -17,15 +17,16 @@
         <a class="header-top__logo logo link" href="index.html">
           <img class="logo__img img" src="img/logo.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»">
         </a>
+        <form class="header-top__form search-form" action="https://echo.htmlacademy.ru" method="post">
+          <input class="search-form__input" type="search" name="search" id="search-field" placeholder="Поиск:">
+          <label class="search-form__label visually-hidden" for="search">Поиск</label>
+        </form>
         <ul class="header-top__list list">
-          <li class="header-top__item search">
-            <a class="header-top__link link" href="#">Поиск</a>
-          </li>
           <li class="header-top__item bookmarks">
-            <a class="header-top__link link" href="#">Закладки</a>
+            <a class="header-top__link bookmarks-link link" href="#">Закладки: 0</a>
           </li>
-          <li class="header-top__item basket">
-            <a class="header-top__link link" href="#">Корзина</a>
+          <li class="header-top__item basket basket--shopping">
+            <a class="header-top__link basket-link link" href="#">Корзина: 10</a>
           </li>
           <li class="header-top__item checkout">
             <a class="header-top__link link" href="#">Оформить заказ</a>
@@ -41,8 +42,11 @@
           <p class="header-middle__address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
         </div>
         <div class="header-middle__user-account user-account">
-          <button class="user-account__login btn" type="button">Войти</button>
-          <button class="user-account__registration btn" type="button">Регистрация</button>
+          <button class="user-account__name btn" type="button">Равшан Джамшутович</button>
+          <div class="user-account__setting">
+            <a class="user-account__setting-link link" href="#">Мои заказы</a>
+            <a class="user-account__setting-link link" href="#">Личный кабинет</a>
+          </div>
         </div>
       </div>
     </div>
@@ -62,7 +66,7 @@
             <a class="header-bottom__link link" href="#">Новости</a>
           </li>
           <li class="header-bottom__item">
-            <a class="header-bottom__link link" href="#">Спецпердложения</a>
+            <a class="header-bottom__link link" href="#">Спецпредложения</a>
           </li>
           <li class="header-bottom__item">
             <a class="header-bottom__link link" href="#">Доставка</a>
@@ -81,17 +85,25 @@
 
       <ul class="breadcrumbs-list list uppercase">
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link link" href="index.html">Главная</a>
+          <a class="breadcrumbs__link link" href="index.html">
+            <img src="img/icons/home.svg" width="14" height="12" alt="">
+          </a>
         </li>
-        <li class="breadcrumbs__item">></li>
+        <li class="breadcrumbs__item">
+          <img src="img/icons/right-angle-bracket-rounded.svg" width="8" height="12" alt="">
+        </li>
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link link" href="catalog.html">Каталог</a>
         </li>
-        <li class="breadcrumbs__item">></li>
+        <li class="breadcrumbs__item">
+          <img src="img/icons/right-angle-bracket-rounded.svg" width="8" height="12" alt="">
+        </li>
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link link" href="#">Инструмент</a>
         </li>
-        <li class="breadcrumbs__item">></li>
+        <li class="breadcrumbs__item">
+          <img src="img/icons/right-angle-bracket-rounded.svg" width="8" height="12" alt="">
+        </li>
         <li class="breadcrumbs__item breadcrumbs__item--current">Перфораторы</li>
       </ul>
 
@@ -100,8 +112,10 @@
         <form class="filter__form filter-form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="filter-form__price filter-price">
             <legend class="filter-price__title">Цена:</legend>
-            <input class="filter-price__input" type="range" min="0" max="100" step="1" value="80" id="price-filter">
-            <label class="filter-price__label" for="price-filter">Диапазон цены</label>
+            <div class="filter-price__slider">
+              <input class="filter-price__input" type="range" min="0" max="100" step="1" value="80" id="price-filter">
+              <label class="filter-price__label visually-hidden" for="price-filter">Диапазон цены</label>
+            </div>
             <div class="filter-price__values values-price">
               <input class="values-price__min" type="number" name="price-min" value="0">
               <span>—</span>
@@ -133,16 +147,16 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter-form__powered powered-filter">
-            <legend class="powered-filter__title">Питание:</legend>
-            <ul class="powered-filter__list list">
-              <li class="powered-filter__item">
-                <input class="powered-filter__input" type="radio" name="powered" value="battery" id="battery-filter" checked>
-                <label class="powered-filter__label" for="battery-filter">Аккумуляторные</label>
+          <fieldset class="filter-form__powered filter-powered">
+            <legend class="filter-powered__title">Питание:</legend>
+            <ul class="filter-powered__list list">
+              <li class="filter-powered__item">
+                <input class="filter-powered__input" type="radio" name="powered" value="battery" id="battery-filter" checked>
+                <label class="filter-powered__label" for="battery-filter">Аккумуляторные</label>
               </li>
-              <li class="powered-filter__item">
-                <input class="powered-filter__input" type="radio" name="powered" value="net" id="net-filter">
-                <label class="powered-filter__label" for="net-filter">Сетевые</label>
+              <li class="filter-powered__item">
+                <input class="filter-powered__input" type="radio" name="powered" value="net" id="net-filter">
+                <label class="filter-powered__label" for="net-filter">Сетевые</label>
               </li>
             </ul>
           </fieldset>
@@ -151,31 +165,33 @@
       </section>
 
       <section class="sorting uppercase">
-        <legend class="sorting__title">Сортировка:</legend>
-        <ul class="sorting__list sorting-group list">
-          <li class="sorting-group__item">
-            <input class="sorting-group__input" type="radio" name="group-sort" value="price" id="price-sort" checked>
-            <label class="sorting-group__label" for="price-sort">По цене</label>
-          </li>
-          <li class="sorting-group__item">
-            <input class="sorting-group__input" type="radio" name="group-sort" value="type" id="type-sort">
-            <label class="sorting-group__label" for="type-sort">По типу</label>
-          </li>
-          <li class="sorting-group__item">
-            <input class="sorting-group__input" type="radio" name="group-sort" value="functional" id="functional-sort">
-            <label class="sorting-group__label" for="functional-sort">По функционалу</label>
-          </li>
-        </ul>
-        <ul class="sorting__list sorting-order list">
-          <li class="sorting-order__item">
-            <input class="sorting-order__input" type="radio" name="order-sort" value="asc" id="asc-sort" checked>
-            <label class="sorting-order__label" for="asc-sort">По возрастанию</label>
-          </li>
-          <li class="sorting-order__item">
-            <input class="sorting-order__input" type="radio" name="order-sort" value="desc" id="desc-sort">
-            <label class="sorting-order__label" for="desc-sort">По убыванию</label>
-          </li>
-        </ul>
+        <h2 class="sorting__title">Сортировка:</h2>
+        <div class="sorting__wrap">
+          <ul class="sorting__list sorting-group list">
+            <li class="sorting-group__item">
+              <input class="sorting-group__input" type="radio" name="group-sort" value="price" id="price-sort" checked>
+              <label class="sorting-group__label" for="price-sort">По цене</label>
+            </li>
+            <li class="sorting-group__item">
+              <input class="sorting-group__input" type="radio" name="group-sort" value="type" id="type-sort">
+              <label class="sorting-group__label" for="type-sort">По типу</label>
+            </li>
+            <li class="sorting-group__item">
+              <input class="sorting-group__input" type="radio" name="group-sort" value="functional" id="functional-sort">
+              <label class="sorting-group__label" for="functional-sort">По функционалу</label>
+            </li>
+          </ul>
+          <ul class="sorting__list sorting-order list">
+            <li class="sorting-order__item">
+              <input class="sorting-order__input" type="radio" name="order-sort" value="asc" id="asc-sort" checked>
+              <label class="sorting-order__label" for="asc-sort">По возрастанию</label>
+            </li>
+            <li class="sorting-order__item">
+              <input class="sorting-order__input" type="radio" name="order-sort" value="desc" id="desc-sort">
+              <label class="sorting-order__label" for="desc-sort">По убыванию</label>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="products">
@@ -186,10 +202,6 @@
               <img class="product-item__img img" src="img/products/bosch-bfg-6000.jpg" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
               <figcaption class="product-item__title">Перфоратор BOSCH BFG 6000</figcaption>
             </figure>
-            <div class="product-item__actions-wrap">
-              <button class="product-item__action action-btn-buy btn uppercase" type="button">Купить</button>
-              <button class="product-item__action action-btn-bookmark btn uppercase" type="button">В закладки</button>
-            </div>
             <p class="product-item__price-old uppercase">30500 Р.</p>
             <p class="product-item__price uppercase">25500 Р.</p>
           </li>
@@ -198,10 +210,6 @@
               <img class="product-item__img img" src="img/products/bosch-bfg-6000.jpg" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
               <figcaption class="product-item__title">Перфоратор BOSCH BFG 6000</figcaption>
             </figure>
-            <div class="product-item__actions-wrap">
-              <button class="product-item__action action-btn-buy btn uppercase" type="button">Купить</button>
-              <button class="product-item__action action-btn-bookmark btn uppercase" type="button">В закладки</button>
-            </div>
             <p class="product-item__price-old uppercase">30500 Р.</p>
             <p class="product-item__price uppercase">25500 Р.</p>
           </li>
@@ -210,10 +218,6 @@
               <img class="product-item__img img" src="img/products/bosch-bfg-6000.jpg" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
               <figcaption class="product-item__title">Перфоратор BOSCH BFG 6000</figcaption>
             </figure>
-            <div class="product-item__actions-wrap">
-              <button class="product-item__action action-btn-buy btn uppercase" type="button">Купить</button>
-              <button class="product-item__action action-btn-bookmark btn uppercase" type="button">В закладки</button>
-            </div>
             <p class="product-item__price-old uppercase">30500 Р.</p>
             <p class="product-item__price uppercase">25500 Р.</p>
           </li>
@@ -222,10 +226,6 @@
               <img class="product-item__img img" src="img/products/bosch-bfg-6000.jpg" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
               <figcaption class="product-item__title">Перфоратор BOSCH BFG 6000</figcaption>
             </figure>
-            <div class="product-item__actions-wrap">
-              <button class="product-item__action action-btn-buy btn uppercase" type="button">Купить</button>
-              <button class="product-item__action action-btn-bookmark btn uppercase" type="button">В закладки</button>
-            </div>
             <p class="product-item__price-old uppercase">30500 Р.</p>
             <p class="product-item__price uppercase">25500 Р.</p>
           </li>
@@ -234,10 +234,6 @@
               <img class="product-item__img img" src="img/products/bosch-bfg-6000.jpg" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
               <figcaption class="product-item__title">Перфоратор BOSCH BFG 6000</figcaption>
             </figure>
-            <div class="product-item__actions-wrap">
-              <button class="product-item__action action-btn-buy btn uppercase" type="button">Купить</button>
-              <button class="product-item__action action-btn-bookmark btn uppercase" type="button">В закладки</button>
-            </div>
             <p class="product-item__price-old uppercase">30500 Р.</p>
             <p class="product-item__price uppercase">25500 Р.</p>
           </li>
@@ -246,10 +242,6 @@
               <img class="product-item__img img" src="img/products/bosch-bfg-6000.jpg" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
               <figcaption class="product-item__title">Перфоратор BOSCH BFG 6000</figcaption>
             </figure>
-            <div class="product-item__actions-wrap">
-              <button class="product-item__action action-btn-buy btn uppercase" type="button">Купить</button>
-              <button class="product-item__action action-btn-bookmark btn uppercase" type="button">В закладки</button>
-            </div>
             <p class="product-item__price-old uppercase">30500 Р.</p>
             <p class="product-item__price uppercase">25500 Р.</p>
           </li>
@@ -258,10 +250,6 @@
               <img class="product-item__img img" src="img/products/bosch-bfg-6000.jpg" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
               <figcaption class="product-item__title">Перфоратор BOSCH BFG 6000</figcaption>
             </figure>
-            <div class="product-item__actions-wrap">
-              <button class="product-item__action action-btn-buy btn uppercase" type="button">Купить</button>
-              <button class="product-item__action action-btn-bookmark btn uppercase" type="button">В закладки</button>
-            </div>
             <p class="product-item__price-old uppercase">30500 Р.</p>
             <p class="product-item__price uppercase">25500 Р.</p>
           </li>
@@ -270,10 +258,6 @@
               <img class="product-item__img img" src="img/products/bosch-bfg-6000.jpg" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
               <figcaption class="product-item__title">Перфоратор BOSCH BFG 6000</figcaption>
             </figure>
-            <div class="product-item__actions-wrap">
-              <button class="product-item__action action-btn-buy btn uppercase" type="button">Купить</button>
-              <button class="product-item__action action-btn-bookmark btn uppercase" type="button">В закладки</button>
-            </div>
             <p class="product-item__price-old uppercase">30500 Р.</p>
             <p class="product-item__price uppercase">25500 Р.</p>
           </li>
@@ -282,13 +266,10 @@
               <img class="product-item__img img" src="img/products/bosch-bfg-6000.jpg" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
               <figcaption class="product-item__title">Перфоратор BOSCH BFG 6000</figcaption>
             </figure>
-            <div class="product-item__actions-wrap">
-              <button class="product-item__action action-btn-buy btn uppercase" type="button">Купить</button>
-              <button class="product-item__action action-btn-bookmark btn uppercase" type="button">В закладки</button>
-            </div>
             <p class="product-item__price-old uppercase">30500 Р.</p>
             <p class="product-item__price uppercase">25500 Р.</p>
           </li>
+
         </ul>
 
         <ul class="products__pagination pagination-list list uppercase">
@@ -361,7 +342,7 @@
             <a class="footer-middle__link link" href="#">Инструмент</a>
           </li>
           <li class="footer-middle__item">
-            <a class="footer-middle__link link" href="#">Спецпердложения</a>
+            <a class="footer-middle__link link" href="#">Спецпредложения</a>
           </li>
         </ul>
       </div>
@@ -376,13 +357,19 @@
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="footer-bottom__social-list list">
             <li class="footer-bottom__social-item">
-              <a class="footer-bottom__social-link link" href="#">Вконтакте</a>
+              <a class="footer-bottom__social-link link" href="#">
+                <img src="img/icons/vk.svg" alt="Логотип Вконтакте" width="25" height="14">
+              </a>
             </li>
             <li class="footer-bottom__social-item">
-              <a class="footer-bottom__social-link link" href="#">Фейсбук</a>
+              <a class="footer-bottom__social-link link" href="#">
+                <img src="img/icons/facebook.svg" alt="Логотип Фейсбук" width="12" height="22">
+              </a>
             </li>
             <li class="footer-bottom__social-item">
-              <a class="footer-bottom__social-link link" href="#">Инстаграм</a>
+              <a class="footer-bottom__social-link link" href="#">
+                <img src="img/icons/instagram.svg" alt="Логотип Инстаграм" width="21" height="21">
+              </a>
             </li>
           </ul>
         </div>
