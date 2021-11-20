@@ -40,20 +40,20 @@
     </div>
     <div class="page-header__header-middle header-middle">
       <div class="header-middle__wrap wrap">
-        <p class="header-middle__description">Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</p>
+        <i class="header-middle__description">Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</i>
         <div class="header-middle__info-wrap">
           <a class="header-middle__phone link" href="tel:+78005558628">+7 800 555-86-28</a>
           <p class="header-middle__address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
         </div>
         <div class="header-middle__user-account user-account">
-          <div class="user-account__login">
+          <a class="user-account__login-link link btn">
             <svg width="20" height="18" viewBox="0 0 20 18">
               <path d="M14.1667 9L5.71429 0.5V6.5H0V11.5H5.71429V17.5L14.1667 9Z" fill="#C5C5C5" />
               <path d="M16.1771 15.51H11.3895V17.5H16.1771C18.2514 17.5 19.0381 15.69 19.0619 14.474V3.528C19.0381 2.311 18.2514 0.5 16.1771 0.5H11.3895V2.49H16.1771C16.9762 2.49 17.1219 3.171 17.1391 3.547V14.451C17.1229 14.827 16.9762 15.51 16.1771 15.51Z" fill="#C5C5C5" />
             </svg>
-            <button class="user-account__login-link btn" type="button">Войти</button>
-          </div>
-          <button class="user-account__registration btn" type="button">Регистрация</button>
+            <span>Войти</span>
+          </a>
+          <a class="user-account__registration link btn">Регистрация</a>
         </div>
       </div>
     </div>
@@ -111,11 +111,11 @@
             <button class="btn" type="button" aria-label="Назад"></button>
             <button class="btn" type="button" aria-label="Вперед"></button>
           </div>
-          <a class="pre-catalog-slider__link link uppercase" href="catalog.html">Открыть каталог</a>
           <div class="pre-catalog-slider__controls">
             <button class="btn" type="button" aria-label="Первый слайд"></button>
             <button class="btn pre-catalog-slider__control--current" type="button" aria-label="Второй слайд"></button>
           </div>
+          <a class="pre-catalog-slider__link link uppercase" href="catalog.html">Открыть каталог</a>
         </li>
         <li class="pre-catalog__item materials item--new">
           <h3 class="pre-catalog__item-title">Материалы</h3>
@@ -166,7 +166,7 @@
               <img class="product-item__img img" src="img/products/bosch-bfg-9000.jpg" width="184" height="164" alt="Фото перфоратора BOSCH BFG 9000">
             </div>
           </div>
-          <p class="product-item__price-old uppercase">32500 Р.</p>
+          <s class="product-item__price-old uppercase">32500 Р.</s>
           <p class="product-item__price uppercase">25500 Р.</p>
           <div class="product-item__actions">
             <a class="product-item__buy link uppercase">Купить</a>
@@ -183,7 +183,7 @@
               <img class="product-item__img img" src="img/products/bosch-bfg-3000.jpg" width="127" height="122" alt="Фото перфоратора BOSCH BFG 3000">
             </div>
           </div>
-          <p class="product-item__price-old uppercase">22500 Р.</p>
+          <s class="product-item__price-old uppercase">22500 Р.</s>
           <p class="product-item__price uppercase">15500 Р.</p>
           <div class="product-item__actions">
             <a class="product-item__buy link uppercase">Купить</a>
@@ -200,7 +200,7 @@
               <img class="product-item__img img" src="img/products/bosch-bfg-6000.jpg" width="144" height="128" alt="Фото перфоратора BOSCH BFG 6000">
             </div>
           </div>
-          <p class="product-item__price-old uppercase">30500 Р.</p>
+          <s class="product-item__price-old uppercase">30500 Р.</s>
           <p class="product-item__price uppercase">25500 Р.</p>
           <div class="product-item__actions">
             <a class="product-item__buy link uppercase">Купить</a>
@@ -217,7 +217,7 @@
               <img class="product-item__img img" src="img/products/bosch-bfg-2000.jpg" width="127" height="112" alt="Фото перфоратора BOSCH BFG 2000">
             </div>
           </div>
-          <p class="product-item__price-old uppercase">22500 Р.</p>
+          <s class="product-item__price-old uppercase">22500 Р.</s>
           <p class="product-item__price uppercase">12500 Р.</p>
           <div class="product-item__actions">
             <a class="product-item__buy link uppercase">Купить</a>
@@ -441,11 +441,11 @@
       <div class="feedback-form__data">
         <p class="feedback-form__item">
           <label for="feedback-form-name">Ваше имя:</label>
-          <input id="feedback-form-name" type="text" name="name" placeholder="Имя Фамилия">
+          <input id="feedback-form-name" type="text" name="name" required placeholder="Имя Фамилия">
         </p>
         <p class="feedback-form__item">
           <label for="feedback-form-email">Ваш e-mail:</label>
-          <input id="feedback-form-email" type="text" name="email" placeholder="email@example.com">
+          <input id="feedback-form-email" type="text" name="email" required placeholder="email@example.com">
         </p>
         <p class="feedback-form__item">
           <label for="feedback-form-text">Текст письма:</label>
@@ -456,16 +456,17 @@
         <button class="feedback-form__send-btn btn uppercase" type="submit">Отправить</button>
       </div>
     </form>
-    <button class="feedback__close-btn btn" type="button">
-      <img class="img" src="img/icons/close.svg" alt="Закрыть форму" width="21" height="21">
+    <button class="feedback__close-btn btn" type="button" aria-label="Закрыть форму">
+      <img class="img" src="img/icons/close.svg" alt="" width="21" height="21">
     </button>
   </section>
 
   <section class="map-modal modal">
     <h2 class="visually-hidden">Карта</h2>
-    <img src="img/map-preview.png" alt="Карта" width="943" height="449">
-    <button class="map__close-btn btn" type="button">
-      <img class="img" src="img/icons/close.svg" alt="Закрыть форму" width="21" height="21">
+    <!-- <img src="img/map-preview.png" alt="Карта" width="943" height="449"> -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.21004234419127!2d30.316186226877825!3d59.96797469105086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc4e8ce61%3A0xe703c377f3424272!2sStudio%20212!5e0!3m2!1sru!2sru!4v1637410276484!5m2!1sru!2sru" width="943" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <button class="map__close-btn btn" type="button" aria-label="Закрыть форму">
+      <img class="img" src="img/icons/close.svg" alt="" width="21" height="21">
     </button>
   </section>
 
@@ -476,8 +477,8 @@
         <a href="#" class="cart__checkout-link link btn uppercase">Оформить заказ</a>
         <button class="cart__continue-shopping-btn btn uppercase">Продолжить покупки</button>
       </div>
-      <button class="cart__close-btn btn" type="button">
-        <img class="img" src="img/icons/close.svg" alt="Закрыть форму" width="21" height="21">
+      <button class="cart__close-btn btn" type="button" aria-label="Закрыть форму">
+        <img class="img" src="img/icons/close.svg" alt="" width="21" height="21">
       </button>
     </div>
   </section>
