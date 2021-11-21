@@ -263,6 +263,7 @@ body > * > * > * {
 }
 
 .header-top__form {
+  min-width: 220px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -669,7 +670,7 @@ body > * > * > * {
   padding: 0 25px;
 }
 
-.header-bottom__item {
+.header-bottom__link {
   display: block;
   font-size: 18px;
   line-height: 24px;
@@ -678,11 +679,11 @@ body > * > * > * {
   padding: 16px 28px 15px 28px;
 }
 
-.header-bottom__item:hover {
+.header-bottom__link:hover {
   background-color: var(--blue-bunting);
 }
 
-.header-bottom__item:active {
+.header-bottom__link:active {
   color: var(--white-alpha-050);
   background-color: var(--blue-tangaroa);
 }
@@ -1368,7 +1369,7 @@ body > * > * > * {
           box-shadow: 0px 1px 0px var(--white), inset 0px 1px 0px var(--white);
 }
 
-.service-controls__item:hover:not(.service-slider__item--current) {
+.service-controls__item:not(.service-controls__item--current):hover {
   background-color: var(--blue-bunting);
 }
 
