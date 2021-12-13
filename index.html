@@ -94,22 +94,22 @@
       <ul class="pre-catalog__list list">
         <li class="pre-catalog__item pre-catalog-perforators pre-catalog-slider">
           <ul class="pre-catalog-slider__list list">
-            <li class="pre-catalog-slider__item pre-catalog-slider__item--current">
-              <div class="pre-catalog-slider__description">
-                <h3 class="pre-catalog-slider__title uppercase">Перфораторы</h3>
-                <p class="pre-catalog-slider__text">Настоящие мужские игрушка</p>
-              </div>
-            </li>
-            <li class="pre-catalog-slider__item">
+            <li class="pre-catalog-slider__item drills">
               <div class="pre-catalog-slider__description">
                 <h3 class="pre-catalog-slider__title uppercase">Дрели</h3>
                 <p class="pre-catalog-slider__text">Соседям на радость!</p>
               </div>
             </li>
+            <li class="pre-catalog-slider__item perforators pre-catalog-slider__item--current">
+              <div class="pre-catalog-slider__description">
+                <h3 class="pre-catalog-slider__title uppercase">Перфораторы</h3>
+                <p class="pre-catalog-slider__text">Настоящие мужские игрушка</p>
+              </div>
+            </li>
           </ul>
           <div class="pre-catalog-slider__switches">
-            <button class="btn" type="button" aria-label="Предыдущий слайд"></button>
-            <button class="btn" type="button" aria-label="Следующий слайд"></button>
+            <button class="btn-prev btn" type="button" aria-label="Предыдущий слайд"></button>
+            <button class="btn-next btn" type="button" aria-label="Следующий слайд"></button>
           </div>
           <div class="pre-catalog-slider__controls">
             <button class="btn" type="button" aria-label="Первый слайд"></button>
@@ -471,7 +471,6 @@
 
   <section class="map-modal modal">
     <h2 class="visually-hidden">Карта</h2>
-    <!-- <img src="img/map-preview.png" alt="Карта" width="943" height="449"> -->
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.21004234419127!2d30.316186226877825!3d59.96797469105086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc4e8ce61%3A0xe703c377f3424272!2sStudio%20212!5e0!3m2!1sru!2sru!4v1637410276484!5m2!1sru!2sru" width="943" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     <button class="map__close-btn btn" type="button" aria-label="Закрыть форму">
       <img class="img" src="img/icons/close.svg" alt="" width="21" height="21">
@@ -494,6 +493,7 @@
   <script src="js/feedback.js"></script>
   <script src="js/map.js"></script>
   <script src="js/cart.js"></script>
+  <script src="js/slider.js"></script>
 </body>
 
 </html>
